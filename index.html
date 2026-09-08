@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Kalla Sai Suhas — AI/ML enthusiast and full-stack developer building intelligent systems, Django apps and data-driven products.">
+    <title>Kalla Sai Suhas | AI / ML & Full-Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <noscript><style>.hero-title,.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+</head>
+<body>
+
+    <div id="loader" aria-hidden="true">
+        <div class="loader-inner">
+            <p class="loader-term"><span class="prompt">suhas@portfolio:~$</span> initializing neural portfolio v2.0</p>
+            <p class="loader-log" id="loaderLog"></p>
+            <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+            <p class="loader-pct" id="loaderPct">0%</p>
+        </div>
+    </div>
+
+    <div class="fx" aria-hidden="true">
+        <div class="aurora a1"></div>
+        <div class="aurora a2"></div>
+        <div class="aurora a3"></div>
+        <div class="grid-floor"></div>
+        <canvas id="net"></canvas>
+        <div class="scanlines"></div>
+    </div>
+
+    <div class="cursor-dot" id="cDot"></div>
+    <div class="cursor-ring" id="cRing"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <header class="nav" id="nav">
+        <a href="#home" class="nav-logo">
+            <span class="logo-mark">KSS</span>
+            <span class="logo-text">SAI&nbsp;SUHAS<span class="logo-caret">_</span></span>
+        </a>
+        <nav class="nav-links" id="navLinks">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">Know Me</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#journey" class="nav-link">Journey</a>
+            <a href="#projects" class="nav-link">Projects</a>
+        </nav>
+        <div class="nav-end">
+            <span class="nav-clock" id="navClock">--:--:--</span>
+            <button class="theme-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">
+                <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+            </button>
+            <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero section" id="home">
+            <div class="hero-inner">
+                <div class="hero-left">
+                    <p class="hero-tag"><span class="prompt">suhas@dev:~$</span> cat intro.txt</p>
+                    <h1 class="hero-title" id="heroTitle">KALLA SAI SUHAS</h1>
+                    <p class="hero-role">I build <span class="typed" id="typed"></span><span class="caret">_</span></p>
+                    <p class="hero-desc">
+                        Enthusiastic AI/ML and full-stack developer who turns raw data into
+                        intelligent products — from semantic ticket chatbots and ocean-plastic
+                        prediction models to full-stack Django web apps and data dashboards.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary magnetic" data-cursor>View Projects</a>
+                        <a href="resume.pdf" class="btn btn-ghost magnetic" download data-cursor>Download Resume</a>
+                    </div>
+                    <div class="hero-socials">
+                        <a href="https://github.com/Saisuhas07" target="_blank" rel="noopener" aria-label="GitHub" data-cursor>
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.26.73-1.55-2.57-.29-5.27-1.28-5.27-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.28 5.69.42.36.79 1.06.79 2.14v3.17c0 .31.2.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kalla-sai-suhas-05621a377/" target="_blank" rel="noopener" aria-label="LinkedIn" data-cursor>
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3-.03-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21H9z"/></svg>
+                        </a>
+                        <a href="mailto:suhasofficial08@gmail.com" aria-label="Email" data-cursor>
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="cube-stage" id="cubeStage">
+                        <div class="cube">
+                            <div class="face f-front"><img src="WhatsApp%20Image%202025-01-23%20at%2012.24.02_bf961ed1.jpg" alt="Kalla Sai Suhas"></div>
+                            <div class="face f-back"><img src="logos/django.svg" alt="Django"></div>
+                            <div class="face f-right"><img src="logos/langchain.svg" alt="LangChain"></div>
+                            <div class="face f-left"><img src="logos/scikitlearn.svg" alt="scikit-learn"></div>
+                            <div class="face f-top"><img src="Java_Logo.webp" alt="Java"></div>
+                            <div class="face f-bottom"><img src="logos/sqlite.svg" alt="SQLite"></div>
+                        </div>
+                        <div class="orbit o1"></div>
+                        <div class="orbit o2"></div>
+                        <div class="cube-glow"></div>
+                    </div>
+                    <span class="hud corner-tl"></span>
+                    <span class="hud corner-tr"></span>
+                    <span class="hud corner-bl"></span>
+                    <span class="hud corner-br"></span>
+                    <span class="float-chip c1" data-depth="16">Pythonista</span>
+                    <span class="float-chip c2" data-depth="28">LangChain</span>
+                    <span class="float-chip c3" data-depth="40">Django</span>
+                    <span class="float-chip c4" data-depth="10">NumPy</span>
+                </div>
+            </div>
+            <a href="#about" class="scroll-hint" data-cursor>
+                <span>scroll</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </a>
+        </section>
+
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track" id="marqueeTrack"></div>
+        </div>
+
+        <section class="section about section-pad" id="about">
+            <div class="section-head reveal">
+                <span class="section-index">// 01</span>
+                <h2 class="section-title">Know Me</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-left reveal">
+                    <div class="photo-card tilt3d" data-cursor>
+                        <div class="photo-frame">
+                            <img src="WhatsApp%20Image%202025-01-23%20at%2012.24.02_bf961ed1.jpg" alt="Kalla Sai Suhas">
+                            <div class="photo-scan"></div>
+                        </div>
+                        <div class="photo-status"><span class="pulse-dot"></span> Open to opportunities</div>
+                    </div>
+                    <div class="badge-float bf1" data-depth="18">AI / ML</div>
+                    <div class="badge-float bf2" data-depth="30">Full-Stack</div>
+                </div>
+                <div class="about-right reveal">
+                    <p class="about-lede">
+                        Hello! I'm <span class="grad-text">Sai Suhas</span> — an
+                        <span class="grad-text">AI / ML</span> and
+                        <span class="grad-text">full-stack developer</span> who loves building
+                        smart, data-driven products. From semantic chatbots that reason over thousands
+                        of support tickets, to regression models forecasting ocean plastic accumulation,
+                        and full-stack Django apps — I turn messy data into tools that actually help people.
+                    </p>
+                    <div class="about-details">
+                        <div class="d-item"><span class="d-key">Name</span><span class="d-val">Kalla Sai Suhas</span></div>
+                        <div class="d-item"><span class="d-key">Email</span><span class="d-val">suhasofficial08@gmail.com</span></div>
+                        <div class="d-item"><span class="d-key">Phone</span><span class="d-val">+91-9063222605</span></div>
+                        <div class="d-item"><span class="d-key">Focus</span><span class="d-val">AI / ML &amp; Full-Stack Django</span></div>
+                        <div class="d-item"><span class="d-key">Education</span><span class="d-val">B.Tech CS (AIML) · VIT Chennai</span></div>
+                        <div class="d-item"><span class="d-key">Status</span><span class="d-val"><span class="pulse-dot"></span> Open to work</span></div>
+                    </div>
+                    <div class="counters">
+                        <div class="counter"><span class="num" data-count="4" data-suffix="+">0</span><span class="lbl">Projects Built</span></div>
+                        <div class="counter"><span class="num" data-count="20" data-suffix="+">0</span><span class="lbl">Tech Tools &amp; Libraries</span></div>
+                        <div class="counter"><span class="num" data-count="3" data-suffix=" mo">0</span><span class="lbl">AI Internship</span></div>
+                        <div class="counter"><span class="num" data-count="3" data-suffix="+">0</span><span class="lbl">Years Learning</span></div>
+                    </div>
+                    <div class="touch-strip reveal">
+                        <a href="mailto:suhasofficial08@gmail.com" class="touch-btn" data-cursor>
+                            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+                            Email
+                        </a>
+                        <a href="tel:+919063222605" class="touch-btn" data-cursor>
+                            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+                            +91-9063222605
+                        </a>
+                        <a href="https://github.com/Saisuhas07" target="_blank" rel="noopener" class="touch-btn" data-cursor>
+                            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.26.73-1.55-2.57-.29-5.27-1.28-5.27-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.28 5.69.42.36.79 1.06.79 2.14v3.17c0 .31.2.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/kalla-sai-suhas-05621a377/" target="_blank" rel="noopener" class="touch-btn" data-cursor>
+                            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3-.03-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21H9z"/></svg>
+                            LinkedIn
+                        </a>
+                        <a href="resume.pdf" download class="touch-btn" data-cursor>
+                            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m-5-6 5-5 5 5M5 21h14"/></svg>
+                            Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section skills section-pad" id="skills">
+            <div class="section-head reveal">
+                <span class="section-index">// 02</span>
+                <h2 class="section-title">Skills &amp; Stack</h2>
+            </div>
+            <div class="skill-deck">
+                <div class="skill-card tilt3d reveal" data-cursor>
+                    <h3 class="skill-card-title"><span class="card-glyph">◉</span> Programming Languages</h3>
+                    <div class="chip-row">
+                        <span class="chip">Python</span><span class="chip">C</span><span class="chip">C++</span>
+                        <span class="chip">Java</span><span class="chip">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-card tilt3d reveal" data-cursor>
+                    <h3 class="skill-card-title"><span class="card-glyph">▣</span> Frontend Development</h3>
+                    <div class="chip-row">
+                        <span class="chip">React</span><span class="chip">HTML</span><span class="chip">CSS</span>
+                        <span class="chip">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-card tilt3d reveal" data-cursor>
+                    <h3 class="skill-card-title"><span class="card-glyph">≡</span> Backend, APIs &amp; Databases</h3>
+                    <div class="chip-row">
+                        <span class="chip">Django</span><span class="chip">Django REST Framework</span>
+                        <span class="chip">REST APIs</span><span class="chip">PostgreSQL</span><span class="chip">SQLite</span>
+                    </div>
+                </div>
+                <div class="skill-card tilt3d reveal" data-cursor>
+                    <h3 class="skill-card-title"><span class="card-glyph">⬡</span> Generative AI &amp; LangChain</h3>
+                    <div class="chip-row">
+                        <span class="chip">LangChain</span><span class="chip">OpenAI GPT</span><span class="chip">LLMs</span>
+                        <span class="chip">Prompt Engineering</span><span class="chip">Agents</span>
+                        <span class="chip">RAG Pipelines</span>
+                        <span class="chip">Transformer Models</span>
+                        <span class="chip">Microsoft AI Foundry</span>
+                    </div>
+                </div>
+                <div class="skill-card tilt3d reveal" data-cursor>
+                    <h3 class="skill-card-title"><span class="card-glyph">◈</span> AI / ML Libraries</h3>
+                    <div class="chip-row">
+                        <span class="chip">NumPy</span><span class="chip">Pandas</span><span class="chip">scikit-learn</span>
+                        <span class="chip">PyTorch</span><span class="chip">Matplotlib</span><span class="chip">FAISS</span>
+                        <span class="chip">OpenCV</span><span class="chip">Hugging Face</span>
+                    </div>
+                </div>
+                <div class="skill-card tilt3d reveal" data-cursor>
+                    <h3 class="skill-card-title"><span class="card-glyph">⌬</span> Tools &amp; Fundamentals</h3>
+                    <div class="chip-row">
+                        <span class="chip">VS Code</span><span class="chip">Git</span><span class="chip">GitHub</span>
+                        <span class="chip">Streamlit</span><span class="chip">Jupyter Notebook</span>
+                        <span class="chip">Operating Systems</span><span class="chip">Computer Networks</span>
+                        <span class="chip">OOPs</span><span class="chip">DBMS</span>
+                    </div>
+                </div>
+            </div>
+            <div class="logo-strip reveal">
+                <img src="logos/python.svg" alt="Python" title="Python">
+                <img src="logos/numpy.svg" alt="NumPy" title="NumPy">
+                <img src="logos/pandas.svg" alt="Pandas" title="Pandas">
+                <img src="logos/scikitlearn.svg" alt="scikit-learn" title="scikit-learn">
+                <img src="logos/langchain.svg" alt="LangChain" title="LangChain">
+                <img src="logos/tensorflow.svg" alt="TensorFlow" title="TensorFlow">
+                <img src="logos/pytorch.svg" alt="PyTorch" title="PyTorch">
+                <img src="logos/huggingface.svg" alt="Hugging Face" title="Hugging Face">
+                <img src="logos/opencv.svg" alt="OpenCV" title="OpenCV">
+                <img src="logos/jupyter.svg" alt="Jupyter" title="Jupyter">
+                <img src="logos/django.svg" alt="Django" title="Django">
+                <img src="logos/react.svg" alt="React" title="React">
+                <img src="logos/javascript.svg" alt="JavaScript" title="JavaScript">
+                <img src="logos/html5.svg" alt="HTML5" title="HTML5">
+                <img src="logos/css3.svg" alt="CSS3" title="CSS3">
+            </div>
+            <div class="bars-wrap reveal">
+                <div class="bar" data-progress="92"><span class="bar-name">Python</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+                <div class="bar" data-progress="90"><span class="bar-name">HTML &amp; CSS</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+                <div class="bar" data-progress="82"><span class="bar-name">JavaScript</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+                <div class="bar" data-progress="84"><span class="bar-name">Django</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+                <div class="bar" data-progress="78"><span class="bar-name">SQL</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+                <div class="bar" data-progress="80"><span class="bar-name">C</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+                <div class="bar" data-progress="76"><span class="bar-name">C++</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+                <div class="bar" data-progress="72"><span class="bar-name">Java</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+                <div class="bar" data-progress="72"><span class="bar-name">React</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+            </div>
+        </section>
+
+        <section class="section journey section-pad" id="journey">
+            <div class="section-head reveal">
+                <span class="section-index">// 03</span>
+                <h2 class="section-title">Journey</h2>
+            </div>
+            <div class="journey-grid">
+                <div class="journey-col reveal">
+                    <h3 class="journey-sub">Experience</h3>
+                    <div class="timeline">
+                        <div class="t-item">
+                            <div class="t-head">
+                                <span class="t-role">AI Intern</span>
+                                <span class="t-date">May 2025 – Jul 2025</span>
+                            </div>
+                            <p class="t-org">TechProfuse · Hyderabad</p>
+                            <ul class="t-list">
+                                <li>Focused on intelligent automation and language-model integrations.</li>
+                                <li>Built AI-driven support &amp; automation tools with LangChain and OpenAI APIs.</li>
+                                <li>Contributed to smart query processing and document-understanding systems.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="journey-col reveal">
+                    <h3 class="journey-sub">Education</h3>
+                    <div class="timeline">
+                        <div class="t-item">
+                            <div class="t-head">
+                                <span class="t-role">B.Tech in Computer Science (AIML)</span>
+                                <span class="t-date">2023 – 2027</span>
+                            </div>
+                            <p class="t-org">VIT University, Chennai · CGPA 8.55</p>
+                        </div>
+                        <div class="t-item">
+                            <div class="t-head">
+                                <span class="t-role">Class 12 · CBSE</span>
+                                <span class="t-date">2021 – 2023</span>
+                            </div>
+                            <p class="t-org">P Obul Reddy Public School, Hyderabad · 91.8%</p>
+                        </div>
+                        <div class="t-item">
+                            <div class="t-head">
+                                <span class="t-role">Class 10 · CBSE</span>
+                                <span class="t-date">2008 – 2021</span>
+                            </div>
+                            <p class="t-org">Bhavan's Atmakuri Rama Rao School, Hyderabad · 94.6%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="certs">
+                <div class="cert-card reveal" data-cursor>
+                    <span class="cert-badge">Cert</span>
+                    <div class="cert-body">
+                        <h4 class="cert-title">Microsoft Certified: Azure AI Fundamentals (AI-901)</h4>
+                        <p class="cert-meta">Microsoft · Jun 2026</p>
+                        <div class="chip-row">
+                            <span class="chip chip-sm">Azure AI Services</span><span class="chip chip-sm">Microsoft AI Foundry</span>
+                            <span class="chip chip-sm">Generative AI</span><span class="chip chip-sm">Prompt Engineering</span>
+                            <span class="chip chip-sm">NLP</span><span class="chip chip-sm">Computer Vision</span>
+                            <span class="chip chip-sm">Speech AI</span><span class="chip chip-sm">Responsible AI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section projects section-pad" id="projects">
+            <div class="section-head reveal">
+                <span class="section-index">// 04</span>
+                <h2 class="section-title">Projects</h2>
+            </div>
+            <div class="filters reveal" id="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai-ml">AI &amp; ML</button>
+                <button class="filter-btn" data-filter="web">Web Dev</button>
+            </div>
+            <div class="project-grid" id="projectGrid"></div>
+            <p class="more-projects reveal">
+                And more experiments on
+                <a href="https://github.com/Saisuhas07?tab=repositories" target="_blank" rel="noopener" class="grad-text">github.com/Saisuhas07 →</a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-name" aria-hidden="true">SAI SUHAS</div>
+        <div class="footer-row">
+            <p>© <span id="year">2026</span> Kalla Sai Suhas · Built with pure HTML, CSS &amp; JS</p>
+            <div class="footer-socials">
+                <a href="https://github.com/Saisuhas07" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.26.73-1.55-2.57-.29-5.27-1.28-5.27-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.28 5.69.42.36.79 1.06.79 2.14v3.17c0 .31.2.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/kalla-sai-suhas-05621a377/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3-.03-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21H9z"/></svg>
+                </a>
+                <a href="mailto:suhasofficial08@gmail.com" aria-label="Email">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+                </a>
+                <button class="to-top" id="toTop" aria-label="Back to top">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5m-7 7 7-7 7 7"/></svg>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast-wrap" id="toastWrap"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
